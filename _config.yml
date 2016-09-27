@@ -9,7 +9,7 @@ name: Dillon R. Gardner
 description: Data scientist and consultant
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars3.githubusercontent.com/u/13119614?v=3&s=466
+avatar: https://raw.githubusercontent.com/dillongardner/dillongardner.github.io/master/images/logo.jpg
 
 #
 # Flags below are optional
@@ -18,12 +18,12 @@ avatar: https://avatars3.githubusercontent.com/u/13119614?v=3&s=466
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: blog@gardner.fyi
   facebook:
   flickr:
   github: dillongardner
   instagram:
-  linkedin:
+  linkedin: https://www.linkedin.com/in/dillon-gardner-53b012b1
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter:
