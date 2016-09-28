@@ -1,10 +1,14 @@
 ---
-layout: page
+layout: about
 title: About
 permalink: /about/
 ---
 
+### About me
+
 Data scientist with a background in physics. To study physics is to seek the beautifully simple models of describing complex phenomena. I love taking the same approach when playing with data to develop new insights. I have experience across the entire pipeline: from a vague idea, to defined data-centric question, through data cleaning and aggregation, algorithm research and development, and finalized result or product.
+
+For more information, check out my CV
 
 ### About the blog
 
