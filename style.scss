@@ -9,6 +9,16 @@
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
+/******************************************/
+/* Centering of .rmd formated posts */
+/* See https://jfisher-usgs.github.io/r/2012/07/03/knitr-jekyll */
+/******************************************/
+
+[alt=center] {
+  display: block;
+  margin: auto;
+}
+
 /**************/
 /* BASE RULES */
 /**************/
