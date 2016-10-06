@@ -9,9 +9,9 @@ title: 'Seasonal Trends in NYC Traffic: STL Part I'
 
 <!-- ggplot of data -->
 
-Everyone knows that traffic is much worse during the week than Sundays. But how much so? And how much does traffic change from month to month? Does traffic decrease in the summer because people take vacation, or do those vacationers clog the roadways? Given all of these fluctuations in traffic, how do we quantify long term trends?
-
 ![center](/figures/STL-Part-I/unnamed-chunk-3-1.png)
+
+Everyone knows that traffic is much worse during the week than Sundays. But how much so? And how much does traffic change from month to month? Does traffic decrease in the summer because people take vacation, or do those vacationers clog the roadways? Given all of these fluctuations in traffic, how do we quantify long term trends?
 
 In data science, these questions fall are referred to as _seasonality_. A wonderful technique to address these questions is Seasonal and Trend decomposition using LOESS (STL). This the first of a three part series on STL. In this post, we'll look at a test case of traffic from the John F. Kennedy Bridge in Manhattan. Part II delves into the weeds of how this works, and Part III discusses how STL can be used for imputing data over missing values, a key advantage over other means of decomposition.
 
