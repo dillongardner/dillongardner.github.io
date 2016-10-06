@@ -1,8 +1,6 @@
 ---
+layout: post
 title: 'Seasonal Trends in New York City Traffic: STL Part I'
-author: "Dillon R. Gardner"
-date: "September 29, 2016"
-output: html_document
 ---
 
 
@@ -30,7 +28,7 @@ head(jfkManhattan)
 
 {% highlight text %}
 ## Source: local data frame [6 x 2]
-## 
+##
 ##         Date  Total
 ##       (date)  (dbl)
 ## 1 2012-03-04 71.236
