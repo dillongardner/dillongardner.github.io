@@ -8,10 +8,10 @@ title: 'Seasonal Trends in NYC Traffic: STL Part I'
 
 
 <!-- ggplot of data -->
-![center](/figures/STL-Part-I/unnamed-chunk-3-1.png)
-
 
 Everyone knows that traffic is much worse during the week than Sundays. But how much so? And how much does traffic change from month to month? Does traffic decrease in the summer because people take vacation, or do those vacationers clog the roadways? Given all of these fluctuations in traffic, how do we quantify long term trends?
+
+![center](/figures/STL-Part-I/unnamed-chunk-3-1.png)
 
 In data science, these questions fall are referred to as _seasonality_. A wonderful technique to address these questions is Seasonal and Trend decomposition using LOESS (STL). This the first of a three part series on STL. In this post, we'll look at a test case of traffic from the John F. Kennedy Bridge in Manhattan. Part II delves into the weeds of how this works, and Part III discusses how STL can be used for imputing data over missing values, a key advantage over other means of decomposition.
 
@@ -39,7 +39,7 @@ head(jfkManhattan)
 ## 6 2012-03-09 91.656
 {% endhighlight %}
 
-From the plot at the top of the post, there is a clear yearly pattern. Traffic peaks in the summer and drops down, bottoming out around the January or February. On top of this pattern, there is a general increase in traffic over time. Additionally, there are variations that depend on the day of the week. This is a bit harder to see because of the density of data, but the daily variation is what causes the figure to look like a wide band.
+From the plot of the raw data, there is a clear yearly pattern. Traffic peaks in the summer and drops down, bottoming out around the January or February. On top of this pattern, there is a general increase in traffic over time. Additionally, there are variations that depend on the day of the week. This is a bit harder to see because of the density of data, but the daily variation is what causes the figure to look like a wide band.
 
 ### Weekly Decomposition
 
