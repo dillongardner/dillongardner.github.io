@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Seasonal Trends in New York City Traffic: STL Part I'
+title: 'Seasonal Trends in NYC Traffic: STL Part I'
 ---
 
 
@@ -65,7 +65,7 @@ plot(stlDaily, xlab="Date", ylab="Daily Vehicles (thous.)")
 
 The top plot is the raw daily traffic data. The "seasonal" component is the daily variation that occurs with weekly periodicity (e.g. each Monday has the same seasonal component that only slowly changes.) The decomposition is done such that the seasonal term (approximately) averages to zero. The trend component is the slowly varying average daily traffic after accounting for the seasonal variation, which in this case are weekly. Once the seasonal and trend components are fit, they are subtracted from the raw data to give the remainder.
 
-In the seasonal and trend plots, some of the data are colored purple. This is where there were gaps in the raw data. Because of the details of how the seasonal and trend componets are fit, the missing data can be interpolated. The ability to impute missing data as the sum of the seasonal and trend components a very nice feature of STL that will be discussed in a later post.
+In the seasonal and trend plots, some of the data are colored purple. This is where there were gaps in the raw data. Because of the details of how the seasonal and trend components are fit, the missing data can be interpolated. The ability to impute missing data as the sum of the seasonal and trend components a very nice feature of STL that will be discussed in a later post.
 
 The seasonal component is not perfectly periodic every seven days. The seasonal component shows long terms changes that are roughly yearly. The difference between weekday and weekend traffic is smaller in the summer than in the winter. The ability to capture this slowly changing seasonality is a key advantage of STL over other decomposition methods such as the `decompose` function in R and `seasonal_decompose` in Python.
 
@@ -115,7 +115,7 @@ grid.arrange(p1,p2, ncol=2)
 
 These figures allow for easy interpretation of the size of the seasonality. For example, the monthly dependence of traffic is similar in size to the weekly variation. The difference between traffic on a Sunday versus a Monday is about the same as the difference between traffic in January versus June.
 
-Addtionally, it is easy to see how the weekly seasonality shifts over time. The yearly seasonality is constant, which is a limit of the size of the data. Since the data cover five years, each month only has five observations. Any variation over five observation would likely be the result of over fitting.
+Additionally, it is easy to see how the weekly seasonality shifts over time. The yearly seasonality is constant, which is a limit of the size of the data. Since the data cover five years, each month only has five observations. Any variation over five observation would likely be the result of over fitting.
 
 
 ### Conclusions
