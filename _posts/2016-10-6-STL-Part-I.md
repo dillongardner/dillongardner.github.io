@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Seasonal Trends in NYC Traffic: STL Part I'
+manualExcerpt: "Test excerpt!" 
 ---
 
 
@@ -100,7 +101,7 @@ plot(stlNormalizedMonthly, xlab="Date", ylab="Daily Vehicles (thous.)")
 
 Now the seasonal term shows that the summers have the highest traffic. Winter is the lowest, with January the lowest month.  The trend line shows that traffic has increased by almost 10 percent over the past four years.  At a monthly level, the remainder term is fairly flat with no clear anomalous months.
 
-By moving to the monthly analysis, what had previously been seen in the trend term in the daily analysis is shifted to the seasonal. This shift demonstrates how seasonal decomposition is an intrinsically ambiguous process. The assignment of temporal variation into seasonality, trend, or remainder, is a matter of opinion and what features are relevant to the modeler. 
+By moving to the monthly analysis, what had previously been seen in the trend term in the daily analysis is shifted to the seasonal. This shift demonstrates how seasonal decomposition is an intrinsically ambiguous process. The assignment of temporal variation into seasonality, trend, or remainder, is a matter of opinion and what features are relevant to the modeler.
 
 ### Subseries Analysis
 A nice way of visualize the decomposition, is plotting the seasonal component by the subseries. A subseries is the set of observations of one season type. For example, all of the Mondays, or all of the Januaries. Each subseries plot is a time series of the seasonal component across the whole time range of the data set.
