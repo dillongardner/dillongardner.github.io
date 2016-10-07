@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Seasonal Trends in NYC Traffic: STL Part I'
-manualExcerpt: "Test excerpt!" 
+excerpt: "Test excerpt!" 
 ---
 
 
