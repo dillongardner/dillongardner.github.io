@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Seasonal Trends in NYC Traffic: STL Part I'
-excerpt: /figures/STL-Part-I/unnamed-chunk-3-1.png 
+excerpt_separator: <!--end excerpt-->
 ---
 
 
@@ -11,6 +11,8 @@ excerpt: /figures/STL-Part-I/unnamed-chunk-3-1.png
 <!-- ggplot of data -->
 
 ![center](/figures/STL-Part-I/unnamed-chunk-3-1.png)
+
+<!--end excerpt--> 
 
 Everyone knows that traffic is much worse during the week than Sundays. But how much so? And how much does traffic change from month to month? Does traffic decrease in the summer because people take vacation, or do those vacationers clog the roadways? Given all of these fluctuations in traffic, how do we quantify long term trends?
 
