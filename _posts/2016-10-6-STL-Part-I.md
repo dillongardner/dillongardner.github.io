@@ -12,7 +12,7 @@ excerpt_separator: <!--end excerpt-->
 
 ![center](/figures/STL-Part-I/unnamed-chunk-3-1.png)
 
-<!--end excerpt--> 
+<!--end excerpt-->
 
 Everyone knows that traffic is much worse during the week than Sundays. But how much so? And how much does traffic change from month to month? Does traffic decrease in the summer because people take vacation, or do those vacationers clog the roadways? Given all of these fluctuations in traffic, how do we quantify long term trends?
 
@@ -46,7 +46,7 @@ From the plot of the raw data, there is a clear yearly pattern. Traffic peaks in
 
 ### Weekly Decomposition
 
-Let's start out by looking at the daily variation. The decomposition takes the average daily traffic for each month as the sum of three components: a seasonal component, a trend component, and the remainder. For each day $t$, the traffic can be written as
+Let's start out by looking at the daily variation. The decomposition takes the average daily traffic for each month as the sum of three components: a seasonal component, a trend component, and the remainder. For each day \\(t\\), the traffic can be written as
 
 $$ DailyTraffic_t = Seasonal_t + Trend_t + Remainder_t $$
 
