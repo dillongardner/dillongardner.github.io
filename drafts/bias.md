@@ -14,21 +14,13 @@ Selection bias is a known issue in data science, but the depth of which is not f
 
 Selection bias occurs whenever the data are not representative of the true underlying distribution. Cicero writes about the atheist Diagoras. A friend tries to convince him of the existence of the gods by pointing to the paintings of men saved from storms on the sea through prayer. Diagoras responds "there are nowhere any pictures of those who have been shipwrecked and drowned at sea." If you want to create a sample of all people who pray, but only include those who commission paintings of themselves surviving storm, the selection bias precludes anyone who drowned.
 
-Once you start looking for selection bias, it is easy to spot. Right now in the U.S. we are inundated with political polls in the run-up to the presidential election. These polls try to be representative of U.S. voters, but struggle with selection bias. Pollsters put in a lot of effort to minimize this and are open about their methodology.[^Rasmussen]
+Once you start looking for selection bias, it is easy to spot. Right now in the U.S. we are inundated with political polls in the run-up to the presidential election. These polls try to be representative of U.S. voters, but struggle with selection bias. Pollsters put in a lot of effort to minimize this and are often open about their methodology.[^Rasmussen] Occasionally, though, the effort to reduce bias can cause problems with small sample sizes. In one notable poll, the New York Times discovered a large weight was placed on a single voter that fell into small, hard to sample demographics. [^NYTimes]
 
-This is, by the way, a huge part of the value added by fiverthirtyeight.com and the Upshot at the New York Times. They model how the selection bias in different polls is likely correlated. For example, the selection bias in polls in Ohio are likely to be strongly correlated to the selection bias in Michigan, but less correlated in North Carolina because of the different demographics. So if Donald Trump outperforms the polls and wins in Ohio, he is more likely to also outperform in Michigan than in North Carolina.[^fivethirtyeight]
+This is, by the way, a huge part of the value added by fiverthirtyeight.com and the Upshot at the New York Times. Instead of working to reduce the polling bias, they model how the selection bias in different polls is likely correlated. For example, the selection bias in polls in Ohio are likely to be strongly correlated to the selection bias in Michigan, but less correlated in North Carolina because of the different demographics. So if Donald Trump outperforms the polls and wins in Ohio, he is more likely to also outperform in Michigan than in North Carolina.[^fivethirtyeight]
 
 Data from applications, whether for jobs, colleges, or loans, almost always have a huge selection bias. In all applications, it is always much easier to obtain data from the people that were accepted. A university that wants to assess their undergraduate admissions could run a test to see how well their selection process correlates with graduation rate or GPA of the admitted students. But the same university could never run a test to see how well a student whom they rejected would have performed. The same core problem exists in financial data.
 
- The only way a university could fully assess their admissions would be to randomly admit some students for whom the admission process says reject. This is
-
-##### observation bias definition
-
-##### Examples
-college applications
-job applications
-all applications
--- huge cost to explore
+ The only way a university could fully assess their admissions would be to randomly admit some students for whom the admission process says reject. This exploration of possible candidates that are being missed is expensive to the point of absurdity. In general, anytime there is a selection bias in which only the result of positive examples are observed and the cost of exploration is high, it will be impossible to get unbiased data.
 
 #### Back to the financial data
 
@@ -40,13 +32,13 @@ $$ P(LoanRepaid | x) $$
 
 The challenge is that what we actually have in the data is the probability that a loan was granted by the bank from which we are learning: $P(LoanGranted | x)$. And if the loan was given, the probability that it was repaid _given a loan was granted_ $P(LoanRepaid | LoanGranted, x)$. The additional conditional statement makes a huge difference and presents quite a challenge.
 
-A naive approach is to approximate $ P(LoanRepaid | x)$ as $P(LoanRepaid | LoanGranted, x)$. Concretely, this is done by throwing out training cases in which the loan was not given and learning to classify loans as either repaid or not repaid. This has the nice feature of avoiding the pesky NAs that appear whenever the loan was denied. But has the bad feature of being terrible wrong.
+A naive approach is to approximate $ P(LoanRepaid | x)$ as $P(LoanRepaid | LoanGranted, x)$. Concretely, this is done by throwing out training cases in which the loan was not given and learning to classify loans as either repaid or not repaid. This has the nice feature of avoiding the pesky missing values that appear whenever the loan was denied. But has the bad feature of being terrible wrong.
 
-A classifier built on this is worthless as it learns on data that is not representative of the distribution of new loan applications. For example, a binary feature `is_employed` of a loan applicant should be useful in determining if a loan would be repaid. However, when following the naive approach, `is_employed` has almost no predictive power for the simple reason that damn near every loan was given to someone employed. In other words, `is_employed` is very predictive of if a loan is given. But not useful for predicting if a loan is repaid because we have nearly no data on an unemployed applicant receiving a loan.
+A classifier built on this is worthless as it learns on data that is not representative of the distribution of new loan applications. For example, in the data I analyzed (and will be shown in a later post), one binary feature whether or not the applicant `is_employed`. Intuitively, this feature should be useful in determining if a loan would be repaid. However, when following the naive approach of only analyzing applications for which a loan was granted, `is_employed` has almost no predictive power for the simple reason that damn near every loan was given to someone employed. In other words, `is_employed` is very predictive of if a loan is given. But not useful for predicting if a loan is repaid because we have nearly no data on an unemployed applicant receiving a loan.
 
 A different approach would be to directly model $P(LoanRepaid | LoanGranted, x)$ and $P(LoanGranted | x)$. This means building two separate models. The first model is exactly the same as the naive model above. The second model is trained to predict whether or not the bank from whom the training data came would issue a loan. The decision to grant a loan would occur only if there is a high probability that the loan was granted by the bank _and_ a high probability that a loan would be repaid given it was granted.
 
-probability math P(loan repaid | loan given, x) = P(loan repaid | x) * p(loan given | x) != P(loan repaid | x)
+
 
 ##### learning options
 lean P(loan given | x) and P(loan repaid| loan given, x) and approximate P(loan repaid | x) as P(loan repaid | lg, x) P(lg | x)
@@ -64,3 +56,5 @@ political
  [^Scientific American] [Scientific American Blog](https://blogs.scientificamerican.com/guest-blog/where-are-the-real-errors-in-political-polls/)
 
  [^fivethirtyeight] [fivethirtyeight](http://fivethirtyeight.com/features/election-update-north-carolina-is-becoming-a-backstop-for-clinton/)
+
+ http://www.nytimes.com/2016/10/13/upshot/how-one-19-year-old-illinois-man-is-distorting-national-polling-averages.html
