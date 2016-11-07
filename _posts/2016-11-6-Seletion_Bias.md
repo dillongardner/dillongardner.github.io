@@ -1,3 +1,9 @@
+---
+layout: post
+title: Selection Bias in Application Data
+---
+
+
 Selection bias is a known issue in data science, but its depth is not fully appreciated. The bias makes a data set far from an infallible neutral source from which models can learning. To blindly run analysis on biased data risks infecting the model with the same bias in the initial data and thereby perpetuating errors and discrimination. In this post, I hope to explain why selection bias is so challenging particularly in application data such as when applying for a financial loan.
 
 ### Selection bias
@@ -40,7 +46,7 @@ The learning  on the financial data is heavily dependent upon $P(LoanGranted | x
 
 Consider a situation in which a bank was explicitly discriminatory in its loan practice and refused to give loans to immigrants. There are correlations between immigrants and other features. These features would then correlated to whether or not a loan is granted. For example, a postal code with a large immigrant population would then become strongly correlated with a loan being denied.
 
-Since a new model needs to learn in part from how the bank gave loans, these correlations would also be learned. Without concerted work to correct the situation, any new model would 'learn' to discriminate against immigrants! Biases in data are infectious: erroneous assumptions or discriminatory behavior of loan decisions infect the data, which in turn infects the next model. Discriminatory practices from years ago can still leave fingerprints in the data and models today. 
+Since a new model needs to learn in part from how the bank gave loans, these correlations would also be learned. Without concerted work to correct the situation, any new model would 'learn' to discriminate against immigrants! Biases in data are infectious: erroneous assumptions or discriminatory behavior of loan decisions infect the data, which in turn infects the next model. Discriminatory practices from years ago can still leave fingerprints in the data and models today.
 
 ### What can we do?
 
