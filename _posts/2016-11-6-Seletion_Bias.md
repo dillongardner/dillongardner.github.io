@@ -34,9 +34,9 @@ A different approach would be to model \\( P(LoanRepaid \| LoanGranted=True, x) 
 
 Mathematically, we can be more precise. The desired quantity is \\(P(LoanRepaid \| x)\\). This can be factored in terms \\(P(LoanRepaid \| LoanGiven, x)\\) and \\(P(LoanGiven \| x)\\):
 
-$$P(LoanRepaid \| x) = \sum_{LoanGiven} P(LoanRepaid \| LoanGiven, x) * P(LoanGiven \| x)$$
+$$P(LoanRepaid | x) = \sum_{LoanGiven} P(LoanRepaid | LoanGiven, x) * P(LoanGiven | x)$$
 
-$$˛P(LoanRepaid \| x) =  P(LoanRepaid \| LoanGiven=True, x) * P(LoanGiven=True\|x) +  \\
+$$˛P(LoanRepaid | x) =  P(LoanRepaid | LoanGiven=True, x) * P(LoanGiven=True|x) +  \\
 \qquad \qquad \qquad \qquad
 P(LoanRepaid \| LoanGiven=False, x) * P(LoanGiven=False\|x)$$
 
