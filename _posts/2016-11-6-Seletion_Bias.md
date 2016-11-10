@@ -36,7 +36,8 @@ Mathematically, we can be more precise. The desired quantity is \\(P(LoanRepaid 
 
 $$P(LoanRepaid \| x) = \sum_{LoanGiven} P(LoanRepaid \| LoanGiven, x) * P(LoanGiven \| x)$$
 
-$$˛P(LoanRepaid \| x) =  P(LoanRepaid \| LoanGiven=True, x) * P(LoanGiven=True\|x) + \qquad \qquad \qquad \qquad
+$$˛P(LoanRepaid \| x) =  P(LoanRepaid \| LoanGiven=True, x) * P(LoanGiven=True\|x) +  \\
+\qquad \qquad \qquad \qquad
 P(LoanRepaid \| LoanGiven=False, x) * P(LoanGiven=False\|x)$$
 
 The first term is learnable with the data collected. The second term, however creates problems due to the selection bias in the data. Since there is no knowledge of the the probability that a loan is repaid if a loan was not given the second term is impossible to determine.
