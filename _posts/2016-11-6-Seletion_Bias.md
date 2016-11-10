@@ -4,7 +4,7 @@ title: Selection Bias in Application Data
 ---
 
 
-Selection bias is a known issue in data science, but its depth is not fully appreciated. The bias makes a data set far from an infallible neutral source from which models can learning. To blindly run analysis on biased data risks infecting the model with the same bias in the initial data and thereby perpetuating errors and discrimination. In this post, I hope to explain why selection bias is so challenging particularly in application data such as when applying for a financial loan.
+Test Selection bias is a known issue in data science, but its depth is not fully appreciated. The bias makes a data set far from an infallible neutral source from which models can learning. To blindly run analysis on biased data risks infecting the model with the same bias in the initial data and thereby perpetuating errors and discrimination. In this post, I hope to explain why selection bias is so challenging particularly in application data such as when applying for a financial loan.
 
 ### Selection bias
 Cicero wrote of the Greek poet and famed poet Diagoras of Melos. His friend, in an effort to convince him of the existence of gods, said, You think the gods have no care for man? Why, you can see from all these votive pictures here how many people have escaped the fury of storms at sea by praying to the gods who have brought them safe to harbor."  tries to convince him of the existence of the gods by pointing to the paintings of men saved from storms on the sea through prayer. Diagoras countered "Yes, indeed, but where are the pictures of all those who suffered shipwreck and perished in the waves?"[^1]
