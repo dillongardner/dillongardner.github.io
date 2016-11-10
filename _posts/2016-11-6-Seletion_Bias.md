@@ -34,9 +34,9 @@ A different approach would be to model \\(P(LoanRepaid | LoanGranted=True, x)\\)
 
 Mathematically, we can be more precise. The desired quantity is \\(P(LoanRepaid | x)\\). This can be factored in terms \\(P(LoanRepaid | LoanGiven, x)\\) and \\(P(LoanGiven | x)\\):
 
-\\[P(LoanRepaid | x) = \sum_{LoanGiven} P(LoanRepaid | LoanGiven, x) * P(LoanGiven | x)\\]
+$$P(LoanRepaid | x) = \sum_{LoanGiven} P(LoanRepaid | LoanGiven, x) * P(LoanGiven | x)$$
 
-\\[˛P(LoanRepaid | x) =  P(LoanRepaid | LoanGiven=True, x) * P(LoanGiven=True|x) + P(LoanRepaid | LoanGiven=False, x) * P(LoanGiven=False|x)\\]
+$$˛P(LoanRepaid | x) =  P(LoanRepaid | LoanGiven=True, x) * P(LoanGiven=True|x) + P(LoanRepaid | LoanGiven=False, x) * P(LoanGiven=False|x)$$
 
 The first term is learnable with the data collected. The second term, however creates problems due to the selection bias in the data. Since there is no knowledge of the the probability that a loan is repaid if a loan was not given the second term is impossible to determine.
 
