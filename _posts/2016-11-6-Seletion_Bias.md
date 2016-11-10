@@ -4,7 +4,7 @@ title: Selection Bias in Application Data
 ---
 
 
-\\(t\\) Selection bias is a known issue in data science, but its depth is not fully appreciated. The bias makes a data set far from an infallible neutral source from which models can learning. To blindly run analysis on biased data risks infecting the model with the same bias in the initial data and thereby perpetuating errors and discrimination. In this post, I hope to explain why selection bias is so challenging particularly in application data such as when applying for a financial loan.
+Selection bias is a known issue in data science, but its depth is not fully appreciated. The bias makes a data set far from an infallible neutral source from which models can learning. To blindly run analysis on biased data risks infecting the model with the same bias in the initial data and thereby perpetuating errors and discrimination. In this post, I hope to explain why selection bias is so challenging particularly in application data such as when applying for a financial loan.
 
 ### Selection bias
 Cicero wrote of the Greek poet and famed poet Diagoras of Melos. His friend, in an effort to convince him of the existence of gods, said, You think the gods have no care for man? Why, you can see from all these votive pictures here how many people have escaped the fury of storms at sea by praying to the gods who have brought them safe to harbor."  tries to convince him of the existence of the gods by pointing to the paintings of men saved from storms on the sea through prayer. Diagoras countered "Yes, indeed, but where are the pictures of all those who suffered shipwreck and perished in the waves?"[^1]
@@ -22,7 +22,7 @@ I recently was asked to create a predictive model for financial loans. The data 
 
 Though this may seems like a standard machine learning based approach, there are fundamental problems. The data are subject to a massive selection bias in that there is only information on repayment for loans that were given. There are loan applicants for whom their ability to repay the loans is unknown because it is untested. This is apparent when evaluating the a model with the criteria above as there is no way to score what happens when the model gives a loan when the ability to pay is unknown. Handling this problem is an incredibly complex problem and key to building any prediction on loans.
 
-The ultimate goal of loan modeling is to predict the probability that a loan would be repaid given input data \\(x\\): \\(P(LoanRepaid | x)\\). The input data includes information like current salary, savings account balance, loan purpose and other financial information. But it could also include demographic information like age, gender, and ethnicity as well geographical information like zip code.
+The ultimate goal of loan modeling is to predict the probability that a loan would be repaid given input data \\(x\\): \\(P(LoanRepaid \| x)\\). The input data includes information like current salary, savings account balance, loan purpose and other financial information. But it could also include demographic information like age, gender, and ethnicity as well geographical information like zip code.
 
 The challenge is that this is not what we actually have in the data. Instead, we can only learn the probability that a loan was granted by the bank, \\(P(LoanGranted | x)\\), and the probability that it was repaid _if a loan was granted_ \\(P(LoanRepaid | LoanGranted=True, x)\\). The additional conditional statement is a way of mathematically representing the selection bias.
 
