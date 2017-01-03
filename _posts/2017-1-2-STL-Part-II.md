@@ -22,7 +22,7 @@ The goal is to separate a time series \\(Y_\nu\\) for \\(\nu = 1\\) to \\(N\\) i
 1. Initialize trend as \\(T_\nu^{(0)} = 0\\) and \\(R_\nu^{(0)}=0\\)
 2. Outer loop - Calculate robustness weights. Run \\(n_{(o)}\\) times
   + Calculate Rν
-  + Calculate robustness weights \\(\rho_\nu = B(|R_\nu|/h)\\) where \\(h = 6 ∗ median(|R_\nu|)\\) and \\(B\\) is the bi-square weight function [1]
+  + Calculate robustness weights \\(\rho_\nu = B( \| R_\nu \|/h)\\) where \\(h = 6 ∗ median( \| R_\nu \|)\\) and \\(B\\) is the bi-square weight function [1]
   + On initial loop, \\(\rho_\nu\\) = 1
 3. Inner loop - Iteratively calculate trend and seasonal terms. Run \\(n_{(i)}\\) times
   + Detrend: \\(Y_\nu − T_\nu^{(k)}\\) where \\(k\\) is the loop number. If the observed value \\(Y_\nu\\) is missing, then the detrended term is also missing
