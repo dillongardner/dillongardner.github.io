@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Seasonal Trends in NYC Traffic: STL Part III
+title: 'STL Algorithm Explained: STL Part I'
 ---
 
 
