@@ -3,11 +3,6 @@ layout: post
 title: 'STL Algorithm Explained: STL Part II'
 ---
 
-
-<!-- Loading and formatting data -->
-
-
-
 This part of a three part series on STL decomposition focuses on a sketch of the algorithm. It is not a rigorous treatment, but hopefully thorough enough to provide a mathematical understanding of how the various hyperparameters affect the decomposition. This post is a bit heavy on the mathematics. For an introduction to STL, please look at [Part I][PartI]
 
 STL (Seasonal Trend decomposition using Loess) was developed by Cleveland et al. [Journal of Official Statistics 6 No. 1 pp 3-33 1990][Cleveland]. The core idea is that a time series can be decomposed into three components: seasonal, trend and remainder (\\(Y_\nu = T_\nu + S_\nu + R_\nu\\)) for \\(\nu = 1\\) to \\(N\\) measured data points. The algorithmic details is not commonly discussed in time series texts in part because unlike other methods, there is no notion of a loss function to be minimized. This is because the notional of seasonal variation is always intrinsically ambiguous: whether the temporal variation should be considered Seasonal, Trend, or Remainder is, to a degree, a matter of opinion and determined by choice of model and model parameters. This is true in STL as well as any seasonal variational approach.
