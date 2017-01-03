@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'STL Algorithm Explained: STL Part I'
+title: 'STL Algorithm Explained: STL Part II'
 ---
 
 
