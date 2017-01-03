@@ -8,7 +8,7 @@ title: 'STL Algorithm Explained: STL Part I'
 
 
 
-This part of a three part series on STL decomposition focuses on a sketch of the algorithm. It is not a rigorous treatment, but hopefully thorough enough to provide a mathematical understanding of how the various hyperparameters affect the decomposition. This post is a bit heavy on the mathematics. For an introduction to STL, please look at Part I
+This part of a three part series on STL decomposition focuses on a sketch of the algorithm. It is not a rigorous treatment, but hopefully thorough enough to provide a mathematical understanding of how the various hyperparameters affect the decomposition. This post is a bit heavy on the mathematics. For an introduction to STL, please look at [Part I][PartI]
 
 STL (Seasonal Trend decomposition using Loess) was developed by Cleveland et al. [Journal of Official Statistics 6 No. 1 pp 3-33 1990][Cleveland]. The core idea is that a time series can be decomposed into three components: seasonal, trend and remainder (\\(Y_\nu = T_\nu + S_\nu + R_\nu\\)) for \\(\nu = 1\\) to \\(N\\) measured data points. The algorithmic details is not commonly discussed in time series texts in part because unlike other methods, there is no notion of a loss function to be minimized. This is because the notional of seasonal variation is always intrinsically ambiguous: whether the temporal variation should be considered Seasonal, Trend, or Remainder is, to a degree, a matter of opinion and determined by choice of model and model parameters. This is true in STL as well as any seasonal variational approach.
 
@@ -48,9 +48,9 @@ In addition to these six primary parameters, the degree of the loess smoothing c
 
 ## Selecting parameters
 
-Of all of these parameters, the most important for the modeler to consider are \\(n_{(p)}\\) and \\(n_{(s)}\\). The decision of which value of \\(n_{(p)}\\) comes from what seasonal behavior is wanted to be captured. As shown in Part I, traffic has weekly seasonality, but also monthly variation. If multiple seasonalities exist, it is typically best to handle the highest frequency variations first, then aggregate and analyze the slow variations: e.g. find the weekly variation first. Account for that seasonality and then aggregate to monthly data to look at monthly variations.
+Of all of these parameters, the most important for the modeler to consider are \\(n_{(p)}\\) and \\(n_{(s)}\\). The decision of which value of \\(n_{(p)}\\) comes from what seasonal behavior is wanted to be captured. As shown in [Part I][PartI], traffic has weekly seasonality, but also monthly variation. If multiple seasonalities exist, it is typically best to handle the highest frequency variations first, then aggregate and analyze the slow variations: e.g. find the weekly variation first. Account for that seasonality and then aggregate to monthly data to look at monthly variations.
 
-\\(n_{(s)}\\) controls the smoothing of the seasonal data. This plays a huge role in determining what variation is considered 'seasonal' versus 'trend' or 'remainder.' The smaller the value, the less smoothing in each cycle-subseries. This causes more of the variation to be captured in the seasonal component. To see this in action, we'll look again at the traffic data from Part I.
+\\(n_{(s)}\\) controls the smoothing of the seasonal data. This plays a huge role in determining what variation is considered 'seasonal' versus 'trend' or 'remainder.' The smaller the value, the less smoothing in each cycle-subseries. This causes more of the variation to be captured in the seasonal component. To see this in action, we'll look again at the traffic data from [Part I][PartI].
 
 As a reminder, the procedure for performing the stl analysis is
 
@@ -85,3 +85,4 @@ I hope this gives at least a bit of a background on how STL works under the hood
 [1] \\(B(u) = (1 - u^2)^2\\) for \\(0 \le u \le 1\\) \\(B(u) = 0\\) for all other \\(u\\)
 
 [Cleveland]: http://www.wessa.net/download/stl.pdf
+[PartI]: http://www.gardner.fyi/blog/STL-Part-I/
