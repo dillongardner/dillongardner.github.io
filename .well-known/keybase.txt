@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/dillongardner
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://gardner.fyi
+  * I am dillongardner (https://keybase.io/dillongardner) on keybase.
+  * I have a public key with fingerprint 558B 9FCD DB55 9D76 7F71  75CF 06F3 AD93 C7F1 4E20
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101381ae476eef90c36f40b384a7ca2021b9ab5dd6bef7013acee70a4d3b5b2568c0a",
+            "fingerprint": "558b9fcddb559d767f7175cf06f3ad93c7f14e20",
+            "host": "keybase.io",
+            "key_id": "06f3ad93c7f14e20",
+            "kid": "0101381ae476eef90c36f40b384a7ca2021b9ab5dd6bef7013acee70a4d3b5b2568c0a",
+            "uid": "45a1d1f2c5147cb41ae48ccd83c09419",
+            "username": "dillongardner"
+        },
+        "service": {
+            "hostname": "gardner.fyi",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1485999473,
+    "expire_in": 157680000,
+    "prev": "1f3829ce71025b3f4f5a7e11a2a901784275c6607614a44a868042ee114bacd7",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.62
+Comment: https://keybase.io/crypto
+
+yMIrAnicrZJrSBVBFMfvzUoyKntHHyqmSAiRnd3Znd3rhyLISqLMCqJuXWdnZq9L
+tnvdu9e6lUaKEfSCKIqgB0WGWWlgIRRmIoE9rOhhmRAmEUhkQVEgUbNln/rafBlm
+zu//n3POnI5xGaGs8KhVeZH+jS0jwvfvnEyF1h85WL4TmC5Lg8hOsIX/3ngZ40k/
+tsVmIAIkKEFFh4QjrHFuGRJVNAtJpqIjgimRJRmaBjFVxjSTW1jAhHKOJYKYYqqm
+rGo6lQjIBZbtxLmX8GzHF7aqqpuGRRkzVdVgWMMWhlillqRZCmGGQrEFEZclISx1
+k4FCJGeSJM+zXXEnDrE/6f3L/+e8U7/tkEogg5ZMVYgwNVFgrFPKdIVKBoJGACa5
+55CtXNDMLitznTjxmMM9UJkLRKjCpjzoblDOMDYM5FlpW+gTnuu71C0TgVLfT0QC
+nZ9OBOA2bsaGLWKm7TDRSiGo4F7Sdh0QgYKkvh14QqSrhmEgrOQCvj1hezxmB4SK
+NV0SK3iGVwhLaCm6bFCOoSSrpmIhSyWYQ0hkYkgQ60gW36FpEtYgIggRXeiRzAWB
+TEIZBkFR5Y4LIlikSeLCMmnHHeKnPA4q29uiI0PhrNDoUSOCEQtljcn+O3jb8jN/
+TMlc2tlcsnnrpOzJM+rmf1rdvXvg8o6i/ufv962cuChTS52Yrh2Yu7i34HHdhNDX
+7nuHFpxPNjxvL1xb1DHzIxjsa9w1rbSprfzV0Ovv0eMbwrcLz565fuFb94LinCXj
+ql9E2+eAS+uLln1N1VPpy76hpz0tu9Olyzu7Nj6q7rPYy+KLa6a8T73wTuVUpl4+
+62rdP7uzZ+BtNFHFq1qPFhtvrqXH+3jPjMFHWv61vJrLYwZON5wtzK5feHpqyZVZ
+PFq7mr7L33S8++rnHR1XCz703VhzLFx/68G6eStmsgJ7qLk3eXBebdXDtqV7nsTP
+Hc6oudsyeLP/6N6esY29TXsv/GwF1T19vwDLUkgt
+=2Ued
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dillongardner
+
+==================================================================
