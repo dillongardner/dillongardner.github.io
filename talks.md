@@ -1,7 +1,7 @@
 ---
-layout: about
-title: About
-permalink: /about/
+layout: page
+title: Talks
+permalink: /talks/
 ---
 
 # Presentations and Talks
